@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <numeric>
 
 using namespace std;
 
@@ -7,11 +8,7 @@ double solution(vector<int> numbers)
 {
     double answer = 0;
     
-    for(int num : numbers)
-    {
-        answer += num;
-    }
-    
+    answer = accumulate(numbers.begin(), numbers.end(), 0);
     answer /= numbers.size();
     
     return answer;
