@@ -1,0 +1,19 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int hp) 
+{
+    int answer = 0;
+    
+    for(int i = 5; i > 1; i-=2)
+    {
+        answer += hp/i;
+        hp %= i;
+    }
+    answer += hp;
+    
+    
+    return answer;
+}
